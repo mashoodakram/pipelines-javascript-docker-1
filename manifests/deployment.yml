@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "creditsalescluster-766d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "creditsalescluster-766d"
+  template:
+    metadata:
+      labels:
+        app: "creditsalescluster-766d"
+    spec:
+      containers:
+        - name: "creditsalescluster-766d"
+          image: "creditsalesregistry.azurecr.io/creditsalescluster"
+          ports:
+          - containerPort: 8080
