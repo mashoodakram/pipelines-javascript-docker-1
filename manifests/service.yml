@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "creditsalescluster-766d"
+    labels:
+        app: "creditsalescluster-766d"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+      name: http
+    selector:
+        app: "creditsalescluster-766d"
